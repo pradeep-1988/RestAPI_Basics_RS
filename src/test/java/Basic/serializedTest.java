@@ -49,7 +49,7 @@ public class serializedTest {
 					.extract().response().asString();    // Extract the complete response in String format.
 				
 				System.out.println(response);
-				System.out.println(response);
+				//System.out.println(response);
 	}
 
 }
