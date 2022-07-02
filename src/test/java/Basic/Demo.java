@@ -94,6 +94,9 @@ public class Demo {
 		System.out.println("Newly updated address is "+ getAddress);
 		
 		Assert.assertEquals(getAddress, newAddress);
+		Assert.assertEquals(getAddress, newAddress);
+		Assert.assertEquals(getAddress, newAddress);
+		Assert.assertEquals(getAddress, newAddress);
 		
 		
 
