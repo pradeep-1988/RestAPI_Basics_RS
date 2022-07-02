@@ -43,7 +43,7 @@ public class Demo {
 			.extract().response().asString();    // Extract the complete response in String format.
 		
 		System.out.println(response);
-		System.out.println(response);
+		//System.out.println(response);
 		
 		// Update place with a new address-> Get place to validate if new address is correctly updated.
 		
