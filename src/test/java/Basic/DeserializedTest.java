@@ -17,7 +17,7 @@ public class DeserializedTest {
 		.when().get("employees")
 		.then().extract().response().asString();
 		
-		//System.out.println(response);
+		System.out.println(response);
 		
 		// Get the 10th employee name with JsonPath class parser.
 		JsonPath js = new JsonPath(response);
