@@ -45,7 +45,7 @@ public class serializedTest {
 					.assertThat()
 						.statusCode(200)
 						.body("scope", equalTo("APP"))
-						.header("Server", "Apache/2.4.18 (Ubuntu)")
+						.header("Server", "Apache/2.4.41 (Ubuntu)")
 					.extract().response().asString();    // Extract the complete response in String format.
 				
 				System.out.println(response);

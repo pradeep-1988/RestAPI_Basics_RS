@@ -6,6 +6,7 @@ import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -33,13 +34,13 @@ public class Demo {
 				 * - For this we need to change the content of file to String and this can be done by converting file 
 				 * - content to Byte and then Byte data to String. for example:
 			*/
-		.body(new String(Files.readAllBytes(Paths.get("C:\\Users\\kumar.pradeep\\Documents\\Learning_Workspace\\RestAPI_Framework_RS\\src\\test\\java\\files\\Addplace.json"))))
+		.body(new String(Files.readAllBytes(Paths.get("/Users/pradeep/Documents/NewStarting_Workspace/RestAPI_Basics_RS/src/test/java/files/Addplace.json"))))
 		.when().post("/maps/api/place/add/json")
 		.then()
 			.assertThat()
 				.statusCode(200)
 				.body("scope", equalTo("APP"))
-				.header("Server", "Apache/2.4.18 (Ubuntu)")
+				.header("Server", "Apache/2.4.41 (Ubuntu)")
 			.extract().response().asString();    // Extract the complete response in String format.
 		
 		System.out.println(response);
